@@ -1,0 +1,288 @@
+// Put your custom SCSS code here
+
+// light theme variable begin -------------------------------------------------------------
+
+:root[data-bs-theme="light"],
+[data-bs-theme="light"] ::backdrop {
+    --navbar-bg: #f6f6f6;
+    --link-color: #007bff;
+}
+
+// light theme variable end  --------------------------------------------------------------
+
+// dark theme variable begin --------------------------------------------------------------
+
+:root,
+::backdrop {
+    --navbar-bg: #242424;
+    --link-color: #b3c7ff;
+}
+
+// dark theme variable end ----------------------------------------------------------------
+
+// global class style begin ---------------------------------------------------------------
+
+.mb-6 { margin-bottom: 4rem !important; }
+.mb-7 { margin-bottom: 5rem !important; }
+.mb-8 { margin-bottom: 6rem !important; }
+.mb-9 { margin-bottom: 7rem !important; }
+.mb-10 { margin-bottom: 8rem !important; }
+
+// global class style end -----------------------------------------------------------------
+
+// Anchor is not working when used in the body.
+html {
+    overflow-y: scroll;
+}
+
+.docs-content {
+    line-height: 1.64;
+}
+
+.docs-content, blockquote {
+    font-size: $font-size-base;
+}
+
+.docs-content ul, ol {
+    padding-left: 16px;
+}
+
+.bg-index {
+    background-image: radial-gradient($gray-300 15%, transparent 15%);
+    background-position: 0 0;
+    background-size: 1rem 1rem;
+    // -webkit-mask: linear-gradient(to top, #fff, transparent);
+    // mask: linear-gradient(to top, #fff, transparent);
+    width: 100%;
+    height: 15rem;
+    margin-top: -10rem;
+    z-index: -1;
+}
+
+// 视频居中显示样式
+.index-video-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;  // 可根据需要调整上下边距
+}
+
+.index-video-container video {
+    max-width: 90%;
+    height: auto;
+    
+    @media (min-width: 1280px) {
+        width: 1280px;
+        height: 720px;
+    }
+}
+
+// 添加 minions.wiki 链接样式
+.index-container a {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+.index-container p {
+    max-width: 800px;
+    // text-align: left;
+}
+
+// navbar style begin --------------------------------------------------------------
+
+.section-nav {
+    summary {
+        padding: 0.4rem;
+        font-weight: var(--bs-body-font-weight);
+        font-size: $font-size-base-sm;
+        // font-size: $font-size-base;
+    }
+
+    a {
+        padding: 0.4rem;
+        font-size: $font-size-base-sm;
+        // font-size: $font-size-base;
+        margin: 0.2rem 0;
+    }
+
+    a:hover,
+    a:active {
+        color: $royalBlue;
+        // color: $body-color;
+    }
+
+    details {
+        margin: 0;
+    }
+
+    li.active a {
+        color: $royalBlue;
+        background-color: var(--navbar-bg);
+        font-weight: 600;
+        // color: $body-color;
+        // font-weight: var(--bs-body-font-weight);
+    }
+}
+
+@include color-mode(dark) {
+    $color-gray: #c1c3c8;
+    .section-nav {
+        a:hover,
+        a:active {
+            color: $royalBlueDark;
+            // color: $color-gray;
+            // color: var(--sl-color-text-accent);
+        }
+
+        li.active a {
+            color: $royalBlueDark;
+            // color: $white;
+            // color: $color-gray;
+            // color: var(--sl-color-text-accent);
+            font-weight: 600;
+            // font-weight: var(--bs-body-font-weight);
+        }
+
+        summary {
+            color: $color-gray;
+        }
+    }
+}
+
+// navbar style end --------------------------------------------------------------
+
+// menu style begin --------------------------------------------------------------
+
+.offcanvas
+.nav-link.active {
+    // color: $body-color;
+    color: $royalBlue;
+    font-weight: var(--bs-body-font-weight);
+}
+
+.offcanvas .nav-link:hover,
+.offcanvas .nav-link:focus {
+    color: $royalBlue;
+    // color: $body-color;
+}
+
+@include color-mode(dark) {
+
+
+    .offcanvas .nav-link.active {
+        color: $royalBlueDark;
+        // color: $body-color-dark;
+        // color: $white;
+        font-weight: var(--bs-body-font-weight);
+    }
+
+    .offcanvas .nav-link:hover,
+    .offcanvas .nav-link:focus {
+        color: $royalBlueDark;
+        // color: $body-color-dark;
+        // color: $white;
+    }
+}
+
+// menu style end --------------------------------------------------------------
+
+// toc style begin -------------------------------------------------------------
+
+#toc a {
+    font-size: $font-size-base-sm;
+}
+
+#toc a.active,
+#toc a:hover {
+    color: $royalBlue;
+    // color: $navActiveColorDark;
+}
+
+@include color-mode(dark) {
+    #toc a.active,
+    #toc a:hover {
+        color: $royalBlueDark;
+        // color: $royalBlue;
+        // color: #b3c7ff;
+    }
+}
+
+// toc style end --------------------------------------------------------------
+
+// code block text wrap
+.expressive-code .highlight[text-wrap="wrap"] pre {
+    text-wrap: wrap;
+}
+
+// set link color
+a {
+    color: var(--link-color);
+}
+
+// remove code block border && add radius
+.expressive-code pre {
+    border-radius: 0.375rem;
+}
+
+.highlight > .chroma {
+    border: none;
+}
+
+.expressive-code .frame.is-terminal .header {
+    border: none;
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.expressive-code .frame.is-terminal .header::after {
+    border-bottom: none;
+}
+
+
+@include color-mode(dark) {
+    .highlight > .chroma {
+        border: none;
+    }
+
+    .expressive-code .frame.is-terminal .header {
+        background-color: #515b77;
+        // background-color: hsl(224deg 19.33% 39.2%);
+    }
+}
+// remove code block border && add radius end
+
+// better code block padding && copy button size
+.highlight > pre {
+    padding: 0.64rem 1rem;
+}
+
+.expressive-code .copy button {
+    width: 2rem;
+    height: 2rem;
+}
+// better code block padding && copy button size end
+
+// better inline code border radius
+code:not(:where(.not-content *)) {
+    background-color: #f1f1f1;
+    border-radius: 0.20rem;
+}
+
+// better table margin
+table {
+    margin: 1rem 0 1.6rem 0;
+}
+
+// section padding
+.section {
+    padding-top: 1rem;
+    padding-bottom: 0;
+}
+
+.section-tail {
+    padding-bottom: 4rem;
+}
+
+// index header section title
+.container-lg .section {
+    padding-top: 3rem;
+}

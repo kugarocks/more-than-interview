@@ -1,0 +1,66 @@
+[Lang]
+other = "编程语言"
+
+[Linux]
+other = "Linux"
+
+[Database]
+other = "数据库"
+
+[Cloud]
+other = "云计算"
+
+[404_text]
+other = "您要查找的页面不存在或已被移动。"
+
+[404_title]
+other = "找不到页面 :("
+
+[browse]
+other = "浏览"
+
+[chapter_next]
+other = "下一章"
+
+[chapter_previous]
+other = "上一章"
+
+[edit_page]
+other = "在此编辑页面"
+
+[get_started]
+other = "示例指南"
+
+[home]
+other = "首页"
+
+[last_updated]
+other = "最后更新于"
+
+[minute]
+one = "分钟"
+other = "分钟"
+
+[on_this_page]
+other = "在本页"
+
+[reading_time]
+other = "预计阅读时间"
+
+[search_loading]
+other = "正在加载搜索索引…"
+
+[search_no_recent]
+other = "没有最近搜索"
+
+[search_no_results]
+other = "没有结果"
+
+[search_placeholder]
+other = "搜索"
+
+[search_title]
+other = "搜索"
+
+[video_unsupported]
+other = "您的浏览器不支持嵌入式视频，但别担心，您可以<a href=\"{{ .RelPermalink }}\">下载它</a>并用您喜欢的视频播放器观看！"

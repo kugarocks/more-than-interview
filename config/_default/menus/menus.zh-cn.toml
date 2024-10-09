@@ -1,0 +1,57 @@
+[[main]]
+  identifier = "lang"
+  name = "Lang"
+  url = "/zh-cn/lang/readme/"
+  weight = 100
+
+[[main]]
+  identifier = "linux"
+  name = "Linux"
+  url = "/zh-cn/linux/readme/"
+  weight = 200
+
+[[main]]
+  identifier = "database"
+  name = "Database"
+  url = "/zh-cn/db/readme/"
+  weight = 300
+
+[[main]]
+  identifier = "cloud"
+  name = "Cloud"
+  url = "/zh-cn/cloud/readme/"
+  weight = 400
+
+[[footer]]
+  name = "粤ICP备2024312555号-1"
+  url = "https://beian.miit.gov.cn/"
+  weight = 10
+
+# lang sidebar
+
+[[sidebar_lang]]
+  name = "README"
+  pageRef = "/lang/readme/"
+  weight = 100
+
+[[sidebar_lang]]
+  name = "MEME"
+  pageRef = "/lang/meme/"
+  weight = 200
+
+# linux sidebar
+
+[[sidebar_linux]]
+  name = "README"
+  pageRef = "/linux/readme/"
+  weight = 100
+
+[[sidebar_linux]]
+  name = "MEME"
+  pageRef = "/linux/meme/"
+  weight = 200
+
+[[sidebar_linux]]
+  name = "Say My Name"
+  pageRef = "/linux/say-my-name/"
+  weight = 300

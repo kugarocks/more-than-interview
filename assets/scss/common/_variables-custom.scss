@@ -1,0 +1,25 @@
+// Put your custom SCSS variables here
+
+$font-family-sans-serif:
+    // "Jost",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Noto Sans",
+    "Liberation Sans",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+
+$font-size-base-sm: 0.875rem;
+// $font-size-md: 1rem;
+// $font-size-xl: 1.125rem;
+
+$gitbookBlue: rgba(52, 109, 219, 1);
+$royalBlue: #4169E1;
+$royalBlueDark: rgba(93, 138, 226, 1);
