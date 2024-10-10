@@ -1,5 +1,5 @@
 ---
-title: "Database"
+title: "MySQL"
 sidebar:
   collapsed: true
 ---

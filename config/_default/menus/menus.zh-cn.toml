@@ -13,7 +13,7 @@
 [[main]]
   identifier = "database"
   name = "Database"
-  url = "/zh-cn/db/readme/"
+  url = "/zh-cn/database/readme/"
   weight = 300
 
 [[main]]
@@ -55,3 +55,15 @@
   name = "Say My Name"
   pageRef = "/linux/say-my-name/"
   weight = 300
+
+# database sidebar
+
+[[sidebar_database]]
+  name = "README"
+  pageRef = "/database/readme/"
+  weight = 100
+
+[[sidebar_database]]
+  name = "MySQL"
+  pageRef = "/database/mysql/"
+  weight = 200
