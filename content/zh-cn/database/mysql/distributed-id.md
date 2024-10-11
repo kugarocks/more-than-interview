@@ -4,7 +4,7 @@ description: ""
 summary: ""
 date: 2024-10-10T09:00:00+08:00
 lastmod: 2024-10-10T09:00:00+08:00
-weight: 300
+weight: 200
 seo:
   title: "分布式ID"
   description: ""
