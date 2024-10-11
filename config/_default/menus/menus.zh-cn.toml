@@ -78,3 +78,22 @@
   name = "MySQL"
   pageRef = "/database/mysql/"
   weight = 200
+
+# cloud sidebar
+
+[[sidebar_cloud]]
+  name = "README"
+  pageRef = "/cloud/readme/"
+  weight = 100
+
+# snippets sidebar
+
+[[sidebar_snippets]]
+  name = "README"
+  pageRef = "/snippets/readme/"
+  weight = 100
+
+[[sidebar_snippets]]
+  name = "MISC"
+  pageRef = "/snippets/misc/"
+  weight = 200
