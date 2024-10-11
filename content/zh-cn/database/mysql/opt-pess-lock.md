@@ -186,3 +186,7 @@ func editProduct(userId int, productId int) error {
     return tx.Commit()
 }
 ```
+
+## 其他实现
+
+* [Golang](/zh-cn/lang/go/opt-pess-lock/)
