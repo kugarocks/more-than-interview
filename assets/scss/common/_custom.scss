@@ -287,7 +287,23 @@ table {
     padding-top: 3rem;
 }
 
-// fix sidebar shake
+// magic fix navbar shake
 .navbar {
     height: 68px;
+}
+.home .navbar {
+    border-bottom: 1px solid #e9ecef;
+}
+[data-bs-theme="dark"] 
+body.home .navbar {
+    border-bottom: 1px solid #23262f;
+}
+
+// better code block title
+.expressive-code .frame.is-terminal .header {
+    justify-content: flex-start;
+    padding-left: 1rem;
+}
+.expressive-code .frame.is-terminal .header::before {
+    display: none;
 }
