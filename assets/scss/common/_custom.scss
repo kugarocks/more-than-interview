@@ -92,14 +92,14 @@ html {
 
 .section-nav {
     summary {
-        padding: 0.4rem;
+        padding: 0.4rem 0.4rem 0.4rem 0;
         font-weight: var(--bs-body-font-weight);
         font-size: $font-size-base-sm;
         // font-size: $font-size-base;
     }
 
     a {
-        padding: 0.4rem;
+        padding: 0.4rem 0.4rem 0.4rem 0;
         font-size: $font-size-base-sm;
         // font-size: $font-size-base;
         margin: 0.2rem 0;
@@ -117,7 +117,7 @@ html {
 
     li.active a {
         color: $royalBlue;
-        background-color: var(--navbar-bg);
+        // background-color: var(--navbar-bg);
         font-weight: 600;
         // color: $body-color;
         // font-weight: var(--bs-body-font-weight);
@@ -285,4 +285,9 @@ table {
 // index header section title
 .container-lg .section {
     padding-top: 3rem;
+}
+
+// fix sidebar shake
+.navbar {
+    height: 68px;
 }

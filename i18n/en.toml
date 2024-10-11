@@ -10,6 +10,9 @@ other = "Database"
 [Cloud]
 other = "Cloud"
 
+[Snippets]
+other = "Snippets"
+
 [404_text]
 other = "The page you are looking for doesn't exist or has been moved."
 

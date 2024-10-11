@@ -8,7 +8,10 @@ other = "Linux"
 other = "数据库"
 
 [Cloud]
-other = "云计算"
+other = "云原生"
+
+[Snippets]
+other = "代码片段"
 
 [404_text]
 other = "您要查找的页面不存在或已被移动。"

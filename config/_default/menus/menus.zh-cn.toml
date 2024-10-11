@@ -22,6 +22,12 @@
   url = "/zh-cn/cloud/readme/"
   weight = 400
 
+[[main]]
+  identifier = "snippets"
+  name = "Snippets"
+  url = "/zh-cn/snippets/readme/"
+  weight = 500
+
 [[footer]]
   name = "粤ICP备2024312555号-1"
   url = "https://beian.miit.gov.cn/"
@@ -38,6 +44,11 @@
   name = "MEME"
   pageRef = "/lang/meme/"
   weight = 200
+
+[[sidebar_lang]]
+  name = "Go"
+  pageRef = "/lang/go/"
+  weight = 300
 
 # linux sidebar
 

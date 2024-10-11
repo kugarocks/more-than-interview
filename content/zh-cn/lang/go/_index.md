@@ -1,5 +1,5 @@
 ---
-title: "编程语言"
+title: "Go"
 sidebar:
   collapsed: true
 ---
