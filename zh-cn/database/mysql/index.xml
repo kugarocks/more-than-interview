@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MySQL on kugarocks</title><link>https://mti.kugarocks.com/zh-cn/database/mysql/</link><description>Recent content in MySQL on kugarocks</description><generator>Hugo</generator><language>zh-cn</language><copyright>Copyright (c) 2020-2024 Thulite</copyright><lastBuildDate>Fri, 11 Oct 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://mti.kugarocks.com/zh-cn/database/mysql/index.xml" rel="self" type="application/rss+xml"/><item><title>分布式ID</title><link>https://mti.kugarocks.com/zh-cn/database/mysql/distributed-id/</link><pubDate>Thu, 10 Oct 2024 09:00:00 +0800</pubDate><guid>https://mti.kugarocks.com/zh-cn/database/mysql/distributed-id/</guid><description>&lt;h2 id="snowflake">Snowflake&lt;/h2>
+&lt;p>Snowflake 是 Twitter 开发的一种高效分布式 ID 生成算法，能够生成全局唯一且递增的 64 位整数 ID。
+它通过时间戳、机器 ID 和序列号的组合，确保了在分布式系统中生成的 ID 既唯一又有序。&lt;/p>
+&lt;h3 id="算法原理">算法原理&lt;/h3>
+&lt;p>Snowflake 的 ID 是一个 64 位的长整型数，其中各部分有特定的分配方式：&lt;/p></description></item><item><title>乐观锁与悲观锁</title><link>https://mti.kugarocks.com/zh-cn/database/mysql/opt-pess-lock/</link><pubDate>Fri, 11 Oct 2024 15:00:00 +0800</pubDate><guid>https://mti.kugarocks.com/zh-cn/database/mysql/opt-pess-lock/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
+&lt;p>乐观锁和悲观锁都是处理并发访问时常用的锁机制，主要用于数据库或多线程编程中，来防止数据不一致问题。
+它们的区别在于处理并发冲突的策略不同，因此适用于不同的场景。&lt;/p>
+&lt;h2 id="乐观锁">乐观锁&lt;/h2>
+&lt;p>乐观锁（Optimistic Locking）虽然名字叫锁，但实际上它并不加锁。
+而是通过版本号机制或时间戳机制，在提交时检查资源是否被其他事务修改。
+若数据没有被修改，提交操作正常进行，否则，抛出异常或返回错误。&lt;/p>
+&lt;h3 id="适用场景">适用场景&lt;/h3>
+&lt;ul>
+&lt;li>读多写少的场景：例如社交网络、用户资料管理等，数据的读取远多于更新。&lt;/li>
+&lt;li>非关键事务：如电商网站的商品详情页，用户查看商品信息时不需要锁定商品数据。&lt;/li>
+&lt;li>高并发环境：如缓存系统、消息队列等，更新冲突的可能性低。&lt;/li>
+&lt;/ul>
+&lt;h3 id="实现示例">实现示例&lt;/h3>
+&lt;p>更新用户资料，如果更新行数为 0，说明版本号不匹配，操作失败。&lt;/p>
+
+
+
+
+&lt;div class="expressive-code">
+ &lt;figure class="frame not-content">
+ &lt;figcaption class="header">
+ &lt;span class="title">&lt;/span>
+ &lt;/figcaption>
+ &lt;div class="highlight" frame="none">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sql" data-lang="sql">&lt;span class="line">&lt;span class="cl">&lt;span class="k">UPDATE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">users&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">SET&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">name&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;new_name&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">version&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">version&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> 
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="k">WHERE&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="n">id&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">AND&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="k">version&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">;&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+ &lt;/figure>
+&lt;/div>
+&lt;h2 id="悲观锁">悲观锁&lt;/h2>
+&lt;p>悲观锁（Pessimistic Locking）假设访问资源时会发生冲突。
+因此在读取或修改资源之前，直接锁定资源，其他线程或事务在锁释放之前无法对该资源进行操作。
+锁可以分为读锁（共享锁）和写锁（排他锁）。&lt;/p></description></item></channel></rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on kugarocks</title><link>https://mti.kugarocks.com/zh-cn/linux/</link><description>Recent content in Linux on kugarocks</description><generator>Hugo</generator><language>zh-cn</language><copyright>Copyright (c) 2020-2024 Thulite</copyright><lastBuildDate>Wed, 09 Oct 2024 23:00:00 +0800</lastBuildDate><atom:link href="https://mti.kugarocks.com/zh-cn/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>README</title><link>https://mti.kugarocks.com/zh-cn/linux/readme/</link><pubDate>Wed, 09 Oct 2024 23:00:00 +0800</pubDate><guid>https://mti.kugarocks.com/zh-cn/linux/readme/</guid><description>&lt;h2 id="linux">Linux&lt;/h2></description></item><item><title>MEME</title><link>https://mti.kugarocks.com/zh-cn/linux/meme/</link><pubDate>Wed, 09 Oct 2024 23:00:00 +0800</pubDate><guid>https://mti.kugarocks.com/zh-cn/linux/meme/</guid><description>&lt;h2 id="win-mac-linux">Win-Mac-Linux&lt;/h2>
+&lt;p>
+
+&lt;img
+ src="https://mti.kugarocks.com/images/misc/win-mac-linux_hu10690778400494544015.webp"
+ width="799"
+ height="489"
+ decoding="async"
+ fetchpriority="auto"
+ loading="lazy"
+ alt="win-mac-linux"id="h-rh-i-0"
+/>&lt;/p>
+&lt;h2 id="todo-add-more-meme">TODO ADD MORE MEME&lt;/h2></description></item><item><title>Say My Name</title><link>https://mti.kugarocks.com/zh-cn/linux/say-my-name/</link><pubDate>Wed, 09 Oct 2024 23:00:00 +0800</pubDate><guid>https://mti.kugarocks.com/zh-cn/linux/say-my-name/</guid><description>&lt;h2 id="linux-torvalds">Linux Torvalds&lt;/h2>
+&lt;p>这个名字的发音要怎么读呢，挺好奇的，搜了一下，还真有人搞了一个集合，救命啊哈哈哈。&lt;/p>
+&lt;video controls preload="auto" width="100%" poster="/images/misc/say-my-name-poster.jpg" playsinline class="html-video">
+ &lt;source src="https://mti.kugarocks.com/videos/misc/say-my-name.mp4" type="video/mp4">
+ &lt;span>您的浏览器不支持嵌入式视频，但别担心，您可以&lt;a href="https://mti.kugarocks.com/videos/misc/say-my-name.mp4">下载它&lt;/a>并用您喜欢的视频播放器观看！&lt;/span>
+ &lt;/video>
+&lt;h2 id="linux-的定义">Linux 的定义&lt;/h2>
+&lt;p>根据维斯百科的资料，Linux 既是一个 Unix-like 内核，
+又是一个基于 Linux 内核的开源 Unix-like 操作系统的统称。
+Linux 内核由 Linus Torvalds 于 1991 年 9 月 17 日首次发布，
+它通常被打包成一个发行版本，其中包括内核以及许多由 GNU 项目提供的系统软件和库。&lt;/p></description></item></channel></rss>
