@@ -61,8 +61,8 @@ jobs:
         publish_branch: al-pages
 
     # Notify Aliyun server to pull code using HTTP webhook
-    # - name: Notify Aliyun server to pull code
-    #   run: |
-    #     curl -X POST "https://api.kugarocks.com/webhook" \
-    #     -H "Content-Type: application/json" \
-    #     -d '{"action": "git-pull", "repo": "more-than-interview", "branch": "al-pages"}'
+    - name: Notify Aliyun server to pull code
+      run: |
+        curl -X POST "https://api.kugarocks.com/webhook" \
+        -H "Content-Type: application/json" \
+        -d '{"action": "git-pull", "repo": "more-than-interview", "branch": "al-pages"}'
