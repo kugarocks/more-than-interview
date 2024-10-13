@@ -307,3 +307,8 @@ body.home .navbar {
 .expressive-code .frame.is-terminal .header::before {
     display: none;
 }
+
+// navbar font bottom line
+.navbar ul.navbar-nav {
+    margin-top: 0.1rem;
+}
