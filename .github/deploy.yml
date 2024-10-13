@@ -1,0 +1,68 @@
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Listen for changes on the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+    # Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Setup Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.17.0'
+
+    # Setup Hugo Extended version
+    # Ensure that the Hugo Extended version is used
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v3
+      with:
+        hugo-version: '0.134.2'
+        extended: true
+
+    # Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Build the Hugo site, output to the gh-pages directory
+    - name: Build Hugo site to gh-pages
+      run: hugo --minify --gc --baseURL="https://kugarocks.github.io/more-than-interview/" -d ./gh-pages
+
+    # Deploy the contents of the gh-pages directory
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./gh-pages
+        publish_branch: gh-pages
+
+    # Build the Hugo site, output to the al-pages directory
+    - name: Build Hugo site to al-pages
+      run: hugo --minify --gc --baseURL="https://mti.kugarocks.com/" -d ./al-pages
+
+    # Add custom domain
+    - name: Add CNAME file
+      run: echo "mti.kugarocks.com" > ./al-pages/CNAME
+
+    # Deploy the contents of the al-pages directory
+    - name: Deploy to Aliyun Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./al-pages
+        publish_branch: al-pages
+
+    # Notify Aliyun server to pull code using HTTP webhook
+    # - name: Notify Aliyun server to pull code
+    #   run: |
+    #     curl -X POST "https://api.kugarocks.com/webhook" \
+    #     -H "Content-Type: application/json" \
+    #     -d '{"action": "git-pull", "repo": "more-than-interview", "branch": "al-pages"}'
