@@ -34,7 +34,7 @@ jobs:
 
     # Build the Hugo site, output to the gh-pages directory
     - name: Build Hugo site to gh-pages
-      run: hugo --minify --gc --baseURL="https://kugarocks.github.io/more-than-interview/" -d ./gh-pages
+      run: hugo --minify --gc --baseURL="https://kugarocks.github.io/more-than-interview" -d ./gh-pages
 
     # Deploy the contents of the gh-pages directory
     - name: Deploy to GitHub Pages
