@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Go on kugarocks</title><link>https://kugarocks.github.io/more-than-interview/zh-cn/lang/go/</link><description>Recent content in Go on kugarocks</description><generator>Hugo</generator><language>zh-cn</language><copyright>Copyright (c) 2020-2024 Thulite</copyright><lastBuildDate>Fri, 11 Oct 2024 15:00:00 +0800</lastBuildDate><atom:link href="https://kugarocks.github.io/more-than-interview/zh-cn/lang/go/index.xml" rel="self" type="application/rss+xml"/><item><title>垃圾回收</title><link>https://kugarocks.github.io/more-than-interview/zh-cn/lang/go/gc/</link><pubDate>Thu, 10 Oct 2024 14:00:00 +0800</pubDate><guid>https://kugarocks.github.io/more-than-interview/zh-cn/lang/go/gc/</guid><description>&lt;h2 id="垃圾回收">垃圾回收&lt;/h2></description></item><item><title>乐观锁与悲观锁</title><link>https://kugarocks.github.io/more-than-interview/zh-cn/lang/go/opt-pess-lock/</link><pubDate>Fri, 11 Oct 2024 15:00:00 +0800</pubDate><guid>https://kugarocks.github.io/more-than-interview/zh-cn/lang/go/opt-pess-lock/</guid><description>&lt;h2 id="简介">简介&lt;/h2>
+&lt;p>在 Go 中，虽然没有直接的“乐观锁”和“悲观锁”概念，但可以通过相应的方式实现类似功能。
+Go 的并发模型主要通过 &lt;code>goroutines&lt;/code> 和通道（channels）来实现并发处理，
+不过常见的锁机制，如 &lt;code>sync.Mutex&lt;/code>（互斥锁）和 &lt;code>CAS&lt;/code> 操作（Compare And Swap），
+也可以用来模拟悲观锁和乐观锁的行为。&lt;/p>
+&lt;h2 id="乐观锁">乐观锁&lt;/h2>
+&lt;p>在 Go 中，乐观锁通常使用原子操作（atomic operations），
+例如 &lt;code>sync/atomic&lt;/code> 包中的 &lt;code>CompareAndSwap&lt;/code> 函数。
+通过版本号或计数器来检查数据是否被修改，类似于数据库中的乐观锁。&lt;/p></description></item></channel></rss>

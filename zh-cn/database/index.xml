@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Database on kugarocks</title><link>https://kugarocks.github.io/more-than-interview/zh-cn/database/</link><description>Recent content in Database on kugarocks</description><generator>Hugo</generator><language>zh-cn</language><copyright>Copyright (c) 2020-2024 Thulite</copyright><lastBuildDate>Wed, 09 Oct 2024 23:00:00 +0800</lastBuildDate><atom:link href="https://kugarocks.github.io/more-than-interview/zh-cn/database/index.xml" rel="self" type="application/rss+xml"/><item><title>README</title><link>https://kugarocks.github.io/more-than-interview/zh-cn/database/readme/</link><pubDate>Wed, 09 Oct 2024 23:00:00 +0800</pubDate><guid>https://kugarocks.github.io/more-than-interview/zh-cn/database/readme/</guid><description>&lt;h2 id="数据库">数据库&lt;/h2>
+&lt;ul>
+&lt;li>[MySQL]
+&lt;ul>
+&lt;li>&lt;a href="https://kugarocks.github.io/more-than-interview/zh-cn/database/mysql/distributed-id/">分布式ID(Snowflake)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>
